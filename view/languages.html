@@ -1,0 +1,31 @@
+<div class="m-3">
+<h3>Languages</h3>
+  <thead>
+    <tr>
+        <th>
+            <input id="myInput" type="text" placeholder="Search by language" data-ng-model="searchbylanguage">
+         </th>
+    </tr>
+  </thead>
+  <table class="table table-striped table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>language_id</th>
+        <th>language_name</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="language in languages | filter:{language_name:searchbylanguage}">
+        <td>{{language.language_id}} {{searchbylanguage}}</td>
+        <td>{{language.language_name}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('languages',language.language_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+
+  </table>
+</div>

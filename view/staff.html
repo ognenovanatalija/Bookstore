@@ -1,0 +1,55 @@
+<div class="m-3">
+<h3>Staff</h3>
+<thead>
+  <tr>
+      <th>
+          <input id="myInput" type="text" placeholder="Search by first name" data-ng-model="searchbyfname">
+       </th>
+       <th>
+          <input id="myInput" type="text" placeholder="Search by last name" data-ng-model="searchbylname">
+       </th>
+       <th>
+          <input id="myInput" type="text" placeholder="Search by town" data-ng-model="searchbystafftown">
+       </th>
+       <th>
+          <input id="myInput" type="text" placeholder="Search by country" data-ng-model="searchbystaffcountry">
+       </th>
+  </tr>
+</thead>
+  <table class="table table-responsive table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>staff_id</th>
+        <th>staff_first_name</th>
+        <th>staff_last_name</th>
+        <th>staff_town</th>
+        <th>staff_country</th>
+        <th>staff_continent</th>
+        <th>staff_address</th>
+        <th>staff_address_number</th>
+        <th>staff_number</th>
+        <th>staff_email</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="employee in staff | filter:{staff_first_name:searchbyfname,staff_last_name:searchbylname,staff_town:searchbystafftown,staff_country:searchbystaffcountry}">
+        <td>{{employee.staff_id}} {{searchbystaff}}</td>
+        <td>{{employee.staff_first_name}}</td>
+        <td>{{employee.staff_last_name}}</td>
+        <td>{{employee.staff_town}}</td>
+        <td>{{employee.staff_country}}</td>
+        <td>{{employee.staff_continent}}</td>
+        <td>{{employee.staff_address}}</td>
+        <td>{{employee.staff_address_number}}</td>
+        <td>{{employee.staff_number}}</td>
+        <td>{{employee.staff_email}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('staff',employee.staff_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,42 @@
+<div class="m-3">
+<h3>Transactions</h3>
+  <thead>
+    <tr>
+        <th>
+            <input id="myInput" type="text" placeholder="Search by date" data-ng-model="searchbytransactiondate">
+         </th>
+         <th>
+            <input id="myInput" type="text" placeholder="Search by quantity" data-ng-model="searchbyquantity">
+         </th>
+         <th>
+            <input id="myInput" type="text" placeholder="Search by book id" data-ng-model="searchbybookid">
+         </th>
+    </tr>
+  </thead>
+  <table class="table table-responsive table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>transactions_id</th>
+        <th>quantity</th>
+        <th>transactions_date</th>
+        <th>books_id</th>
+        <th>clients_id</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="transaction in transactions | filter:{transactions_date:searchbytransactiondate,quantity:searchbyquantity,books_id:searchbybookid}">
+        <td>{{transaction.transactions_id}}</td>
+        <td>{{transaction.quantity}}</td>
+        <td>{{transaction.transactions_date}}</td>
+        <td>{{transaction.books_name}} {{transaction.language_name}}</td>
+        <td>{{transaction.clients_first_name}} {{transaction.clients_last_name}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('transactions',transaction.transactions_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

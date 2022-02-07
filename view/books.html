@@ -1,0 +1,56 @@
+<div class="m-3">
+<h3>Books</h3>
+<input id="myInput" type="text" placeholder="Search by book's name" data-ng-model="searchbyname">
+<thead>
+  <tr>
+  <th>
+    <select name="searchbycategory" id="searchbycategory" data-ng-model="searchbycategory">
+                <option value=""> <i>Choose Category</i></option>
+                <option data-ng-repeat="categories in category" value="{{categories.category_id}}"> {{categories.category_name}}</option>
+            </select>
+</th>
+  </tr>
+</thead>
+  <table class="table table-hover table-bordered table-responsive p-3">
+
+    <thead>
+      <tr>
+        <th>Book Id</th>
+        <th>The name of the book</th>
+        <th>Pages</th>
+        <th>Language</th>
+        <th>Publisher</th>
+        <th>Format</th>
+        <th>Category</th>
+        <th>Author</th>
+        <th>Store</th>
+        <th>Short text</th>
+        <th>Long text</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="book in books | filter:{books_name:searchbyname,category_id:searchbycategory}">
+        <td>{{book.books_id}} {{searchbyname}}</td>
+        <td>{{book.books_name}}</td>
+        <td>{{book.pages}}</td>
+        <td>{{book.language_name}} </td>
+        <td>{{book.publisher_name}} <br> {{book.publisher_country}}</td>
+        <td>{{book.format_name}}</td>
+        <td>{{book.category_name}}</td>
+        <td>{{book.authors_first_name}} <br> {{book.authors_last_name}} <br> {{book.authors_country}}</td>
+        <td>{{book.stores_name}} <br> {{book.stores_country}} <br> {{book.stores_email}}</td>
+        <td>{{book.short_text}}</td>
+        <td>{{book.long_text}}</td>
+        <td>{{book.year}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('books',book.books_id)">DELETE</button></td>
+
+      </tr>
+    </tbody>
+
+
+  </table>
+</div>

@@ -1,0 +1,67 @@
+<div class="m-3">
+<h3>Clients</h3>
+<br>
+<h4>Insert new Client</h4>
+
+<form>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_first_name" class="form-label">First Name </label>
+    <input type="text" class="form-control" id="clients_first_name" placeholder="Enter Client's First Name" name="clients_first_name" data-ng-model="clients_first_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_last_name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="clients_last_name" placeholder="Enter Client's Last Name" name="clients_last_name" data-ng-model="clients_last_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_town" class="form-label">Town</label>
+    <input type="text" class="form-control" id="clients_town" placeholder="Enter Client's Town" name="clients_town" data-ng-model="clients_town">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_country" class="form-label">Country</label>
+    <input type="text" class="form-control" id="clients_country" placeholder="Enter Client's Country" name="clients_country" data-ng-model="clients_country">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_continent" class="form-label">Continent</label>
+    <input type="text" class="form-control" id="clients_continent" placeholder="Enter Client's Continent" name="clients_continent" data-ng-model="clients_continent">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="clients_address" placeholder="Enter Client's Address" name="clients_address" data-ng-model="clients_address">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_address_number" class="form-label">Address number</label>
+    <input type="number" class="form-control" id="clients_address_number" placeholder="Enter Client's Address Number" name="clients_address_numberme" data-ng-model="clients_address_number">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_number" class="form-label">Number</label>
+    <input type="number" class="form-control" id="clients_number" placeholder="Enter Client's number" name="clients_number" data-ng-model="clients_number">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_email" class="form-label">E-mail</label>
+    <input type="text" class="form-control" id="clients_email" placeholder="Enter Client's E-mail" name="clients_email" data-ng-model="clients_email">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="clients_username" placeholder="Enter Client's Username" name="clients_username" data-ng-model="clients_username">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_password" class="form-label">Password</label>
+    <input type="text" class="form-control" id="clients_password" placeholder="Enter Client's Password" name="clients_password" data-ng-model="clients_password">
+  </div>
+
+
+  
+  <button class="btn btn-primary" data-ng-click="addClient(clients_id,clients_first_name,clients_last_name,clients_town,clients_country,clients_continent,clients_address,clients_address_number,clients_number,clients_email,clients_username,clients_password)">Save</button>
+</form>
+</div>

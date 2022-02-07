@@ -1,0 +1,52 @@
+<div class="m-3">
+<h3>Stores</h3>
+<thead>
+  <tr>
+      <th>
+          <input id="myInput" type="text" placeholder="Search by name" data-ng-model="searchbystorename">
+       </th>
+       <th>
+          <input id="myInput" type="text" placeholder="Search by town" data-ng-model="searchbystoretown">
+       </th>
+       <th>
+          <input id="myInput" type="text" placeholder="Search by country" data-ng-model="searchbystorecountry">
+       </th>
+  </tr>
+</thead>
+  <table class="table table-striped table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>stores_id</th>
+        <th>stores_name</th>
+        <th>stores_town</th>
+        <th>stores_country</th>
+        <th>stores_continent</th>
+        <th>stores_address</th>
+        <th>stores_address_number</th>
+        <th>stores_email</th>
+        <th>stores_number</th>
+        <th>staff_id</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="store in stores | filter:{stores_name:searchbystorename,stores_town:searchbystoretown,stores_country:searchbystorecountry}">
+        <td>{{store.stores_id}} {{searchbystorename}}</td>
+        <td>{{store.stores_name}}</td>
+        <td>{{store.stores_town}}</td>
+        <td>{{store.stores_country}}</td>
+        <td>{{store.stores_continent}}</td>
+        <td>{{store.stores_address}}</td>
+        <td>{{store.stores_address_number}}</td>
+        <td>{{store.stores_email}}</td>
+        <td>{{store.stores_number}}</td>
+        <td>{{store.staff_id}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('stores',store.stores_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

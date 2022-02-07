@@ -1,0 +1,106 @@
+<div class="m-3">
+<h3>Books</h3>
+<br>
+<h4>Insert New Book</h4>
+
+<form name="myForm" class="m-3">
+
+  <div class="mb-3 mt-3">
+    <label for="books_name" class="form-label">The name of the Book</label>
+    <input type="text" class="form-control" id="books_name" placeholder="Enter Book Title" name="books_name" data-ng-model="books_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="pages" class="form-label">Pages</label>
+    <input type="number" class="form-control" id="pages" placeholder="Enter number of pages" name="pages" data-ng-model="pages">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="price" class="form-label">Price</label>
+    <input type="number" class="form-control" id="artist_name" placeholder="Enter book's price" name="price" data-ng-model="price">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="language_id" class="form-label"> Language </label>
+    <th>
+      <select name="language_id" id="language_id" data-ng-model="language_id">
+          <option value=""> <i>Choose Language</i></option>
+          <option data-ng-repeat="language in languages" value="{{language.language_id}}"> {{language.language_name}}</option>
+      </select>
+  </th>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="publisher_id" class="form-label"> Publisher </label>
+    <th>
+      <select name="publisher_id" id="publisher_id" data-ng-model="publisher_id">
+          <option value=""> <i>Choose Publisher</i></option>
+          <option data-ng-repeat="publishers in publisher" value="{{publishers.publisher_id}}"> {{publishers.publisher_name}} {{publishers.publisher_country}}</option>
+      </select>
+  </th>
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="format_id" class="form-label"> Format </label>
+    <th>
+      <select name="format_id" id="format_id" data-ng-model="format_id">
+          <option value=""> <i>Choose Format</i></option>
+          <option data-ng-repeat="format in formats" value="{{format.format_id}}"> {{format.format_name}}</option>
+      </select>
+  </th>
+  </div>
+
+  
+  <div class="mb-3 mt-3">
+    <label for="category_id" class="form-label"> Category </label>
+    <th>
+      <select name="category_id" id="category_id" data-ng-model="category_id">
+          <option value=""> <i>Choose Category</i></option>
+          <option data-ng-repeat="categories in category" value="{{categories.category_id}}"> {{categories.category_name}}</option>
+      </select>
+  </th>
+  </div>
+  
+  <div class="mb-3 mt-3">
+    <label for="authors_id" class="form-label"> Author </label>
+    <th>
+      <select name="authors_id" id="authors_id" data-ng-model="authors_id">
+          <option value=""> <i>Choose Author</i></option>
+          <option data-ng-repeat="author in authors" value="{{author.authors_id}}"> {{author.authors_first_name}} {{author.authors_last_name}} </option>
+      </select>
+  </th>
+ 
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_id" class="form-label"> Stores </label>
+    <th>
+      <select name="stores_id" id="stores_id" data-ng-model="stores_id">
+          <option value=""> <i>Choose Store</i></option>
+          <option data-ng-repeat="store in stores" value="{{store.stores_id}}"> {{store.stores_name}} {{store.stores_town}} {{store.stores_country}} {{store.stores_continent}} {{store.stores_address}} {{store.stores_address_number}} {{store.stores_email}} {{store.stores_number}} {{store.staff_id}} </option>
+      </select>
+  </th>
+  </div>
+
+
+  <div class="mb-3 mt-3">
+    <label for="short_text" class="form-label">Short text</label>
+    <input type="text" class="form-control" id="short_text" placeholder="Enter text" name="short_text" data-ng-model="short_text">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="long_text" class="form-label">Long text</label>
+    <input type="text" class="form-control" id="long_text" placeholder="Enter text" name="long_text" data-ng-model="long_text">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="year" class="form-label">Year</label>
+    <input type="number" class="form-control" id="year" placeholder="Enter book's year" name="year" data-ng-model="year">
+  </div>
+
+
+  <button class="btn btn-primary" data-ng-click="addBook(books_name,pages,price,language_id,publisher_id,format_id,category_id,authors_id,stores_id,short_text,long_text,year)">Save</button>
+</form>
+
+
+</div>

@@ -1,0 +1,32 @@
+<div class="m-3">
+<h3>Category</h3>
+           
+  <thead>
+    <tr>
+        <th>
+            <input id="myInput" type="text" placeholder="Search by category name" data-ng-model="searchbycategories">
+         </th>
+    </tr>
+  </thead>
+  <table class="table table-responsive table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>category_id</th>
+        <th>category_name</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="categories in category | filter:{category_name:searchbycategories}">
+        <td>{{categories.category_id}} {{searchbycategories}}</td>
+        <td>{{categories.category_name}}</td>
+      </tr>
+
+      <td><button class="btn btn-primary" data-ng-click="deleteRow('category',categories.category_id)">DELETE</button></td>
+    </tbody>
+
+  </table>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="m-3">
+<h3>Publisher</h3>
+<br>
+<h4>Insert new Publisher</h4>
+
+<form>
+
+  <div class="mb-3 mt-3">
+    <label for="publisher_name" class="form-label">Publisher</label>
+    <input type="text" class="form-control" id="publisher_name" placeholder="Enter Publisher" name="publisher_name" data-ng-model="publisher_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="publisher_country" class="form-label">Publisher's Country</label>
+    <input type="text" class="form-control" id="publisher_country" placeholder="Enter Publisher Country" name="publisher_country" data-ng-model="publisher_country">
+  </div>
+
+  <button class="btn btn-primary" data-ng-click="addPublishers(publisher_name,publisher_country)">Save</button>
+</form>
+</div>

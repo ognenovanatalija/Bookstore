@@ -1,0 +1,34 @@
+<div class="m-3">
+<h3>Authors</h3>
+<thead>
+  <tr>
+      <th>
+          <input id="myInput" type="text" placeholder="Search by author's first name" data-ng-model="searchbyauthorfirst">
+       </th>
+       <th>
+           <input id="myInput" type="text" placeholder="Search by author's last name" data-ng-model="searchbyauthorlast">
+      </th>
+  </tr>
+ </thead>
+
+ <table class="table table-responsive table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>authors_id</th>
+        <th>authors_first_name</th>
+        <th>authors_last_name</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="author in authors | filter:{authors_first_name:searchbyauthorfirst,authors_last_name:searchbyauthorlast}">
+        <td>{{author.authors_id}} {{searchbyauthor}}</td>
+        <td>{{author.authors_first_name}}</td>
+        <td>{{author.authors_last_name}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('authors',author.authors_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

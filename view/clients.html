@@ -1,0 +1,60 @@
+<div>
+<h3>Clients</h3>
+          
+  <thead>
+    <tr>
+        <th>
+            <input id="myInput" type="text" placeholder="Search by first name" data-ng-model="searchbyclientfname">
+         </th>
+         <th>
+            <input id="myInput" type="text" placeholder="Search by last name" data-ng-model="searchbyclientlname">
+         </th>
+         <th>
+            <input id="myInput" type="text" placeholder="Search by town" data-ng-model="searchbyclienttown">
+         </th>
+         <th>
+            <input id="myInput" type="text" placeholder="Search by country" data-ng-model="searchbyclientcountry">
+         </th>
+    </tr>
+  </thead>
+  <table class="table table-striped table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>clients_id</th>
+        <th>clients_first_name</th>
+        <th>clients_last_name</th>
+        <th>clients_town</th>
+        <th>clients_country</th>
+        <th>clients_continent</th>
+        <th>clients_address</th>
+        <th>clients_address_number</th>
+        <th>clients_number</th>
+        <th>clients_email</th>
+        <th>clients_username</th>
+        <th>clients_password</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="client in clients | filter:{clients_first_name:searchbyclientfname,clients_last_name:searchbyclientlname,clients_town:searchbyclienttown,clients_country:searchbyclientcountry}">
+        <td>{{client.clients_id}}</td>
+        <td>{{client.clients_first_name}}</td>
+        <td>{{client.clients_last_name}}</td>
+        <td>{{client.clients_town}}</td>
+        <td>{{client.clients_country}}</td>
+        <td>{{client.clients_continent}}</td>
+        <td>{{client.clients_address}}</td>
+        <td>{{client.clients_address_number}}</td>
+        <td>{{client.clients_number}}</td>
+        <td>{{client.clients_email}}</td>
+        <td>{{client.clients_username}}</td>
+        <td>{{client.clients_password}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('client',clients.clients_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

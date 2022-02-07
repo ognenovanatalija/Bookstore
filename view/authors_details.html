@@ -1,0 +1,20 @@
+<div class="m-3">
+<h3>Authors</h3>
+<br>
+<h4>Insert New Author</h4>
+
+<form>
+  <div class="mb-3 mt-3">
+      
+    <label for="authors_first_name" class="form-label">Author's First Name</label>
+    <input type="text" class="form-control" id="artist_name" placeholder="Enter Author's First Name" name="authors_first_name" data-ng-model="authors_first_name">
+
+    <label for="authors_last_name" class="form-label">Author's Last Name</label>
+    <input type="text" class="form-control" id="authors_last_name" placeholder="Enter Author's Last Name" name="authors_last_name" data-ng-model="authors_last_name">
+
+  </div>
+ 
+  <button class="btn btn-primary" data-ng-click="addAuthor(authors_first_name,authors_last_name)">Save</button>
+
+</form>
+</div>

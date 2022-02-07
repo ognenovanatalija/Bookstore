@@ -1,0 +1,63 @@
+<div class="m-3">
+<h3>Stores</h3>
+<br>
+<h4>Insert new Store</h4>
+
+<form>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_name" class="form-label">Store Name </label>
+    <input type="text" class="form-control" id="stores_name" placeholder="Enter Store Name" name="stores_name" data-ng-model="stores_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_town" class="form-label">Town</label>
+    <input type="text" class="form-control" id="stores_town" placeholder="Enter Store Town" name="stores_town" data-ng-model="stores_town">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_country" class="form-label">Country</label>
+    <input type="text" class="form-control" id="stores_country" placeholder="Enter Store Country" name="stores_country" data-ng-model="stores_country">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_continent" class="form-label">Continent</label>
+    <input type="text" class="form-control" id="stores_continent" placeholder="Enter Store Continent" name="stores_continent" data-ng-model="stores_continent">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="stores_address" placeholder="Enter Store Address" name="stores_address" data-ng-model="stores_address">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_address_number" class="form-label">Address number</label>
+    <input type="number" class="form-control" id="stores_address_number" placeholder="Enter Store Address Number" name="stores_address_number" data-ng-model="stores_address_number">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="stores_email" class="form-label">E-mail</label>
+    <input type="text" class="form-control" id="stores_email" placeholder="Enter Store E-mail" name="stores_email" data-ng-model="stores_email">
+  </div>
+
+
+  <div class="mb-3 mt-3">
+    <label for="stores_number" class="form-label">Number</label>
+    <input type="number" class="form-control" id="stores_number" placeholder="Enter Store number" name="stores_number" data-ng-model="stores_number">
+  </div>
+  
+  <div class="mb-3 mt-3">
+    <label for="staff_id" class="form-label"> Staff id </label>
+    <th>
+      <select name="staff_id" id="staff_id" data-ng-model="staff_id">
+          <option value=""> <i>Choose Store</i></option>
+          <option value="1">Via</option>
+    </th>
+  </div>
+
+
+  
+  <button class="btn btn-primary" data-ng-click="addStore(stores_id,stores_name,stores_town,stores_country,stores_continent,stores_address,stores_address_number,stores_email,stores_number,staff_id)">Save</button>
+</form>
+
+</div>

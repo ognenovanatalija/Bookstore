@@ -1,0 +1,27 @@
+<div class="m-3">
+<h3>Formats</h3>    
+  <thead>
+    <tr>
+        <th>
+            <input id="myInput" type="text" placeholder="Search by format" data-ng-model="searchbyformat">
+         </th>
+    </tr>
+  </thead>  
+  <table class="table table-striped table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>format_id</th>
+        <th>format_name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="format in formats | filter:{format_name:searchbyformat}">
+        <td>{{format.format_id}} {{searchbyformat}}</td>
+        <td>{{format.format_name}}</td>
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('formats',format.format_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

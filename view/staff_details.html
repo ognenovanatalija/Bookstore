@@ -1,0 +1,55 @@
+<div class="m-3">
+<h3>Staff</h3>
+<br>
+<h4>Insert new Staff</h4>
+<form>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_first_name" class="form-label">First Name </label>
+    <input type="text" class="form-control" id="staff_first_name" placeholder="Enter First Name" name="staff_first_name" data-ng-model="staff_first_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_last_name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="staff_last_name" placeholder="Enter Last Name" name="staff_last_name" data-ng-model="staff_last_name">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_town" class="form-label">Town</label>
+    <input type="text" class="form-control" id="staff_town" placeholder="Enter Town" name="staff_town" data-ng-model="staff_town">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_country" class="form-label">Country</label>
+    <input type="text" class="form-control" id="staff_country" placeholder="Enter Country" name="staff_country" data-ng-model="staff_country">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_continent" class="form-label">Continent</label>
+    <input type="text" class="form-control" id="staff_continent" placeholder="Enter Continent" name="staff_continent" data-ng-model="staff_continent">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="staff_address" placeholder="Enter Address" name="staff_address" data-ng-model="staff_address">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_address_number" class="form-label">Address number</label>
+    <input type="number" class="form-control" id="staff_address_number" placeholder="Enter Address Number" name="staff_address_number" data-ng-model="staff_address_number">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_number" class="form-label">Number</label>
+    <input type="number" class="form-control" id="staff_number" placeholder="Enter number" name="staff_number" data-ng-model="staff_number">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="staff_email" class="form-label">E-mail</label>
+    <input type="text" class="form-control" id="staff_email" placeholder="Enter E-mail" name="staff_email" data-ng-model="staff_email">
+  </div>
+
+  
+  <button class="btn btn-primary" data-ng-click="addEmployee(staff_id,staff_first_name,staff_last_name,staff_town,staff_country,staff_continent,staff_address,staff_address_number,staff_number,staff_email)">Save</button>
+</form>
+</div>

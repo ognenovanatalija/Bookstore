@@ -1,0 +1,28 @@
+<h3>Transactions</h3>
+<br>
+<h4>Insert new</h4>
+
+<form>
+
+  <div class="mb-3 mt-3">
+    <label for="quantity" class="form-label">Quantity</label>
+    <input type="number" class="form-control" id="quantity" placeholder="Enter Quantity" name="quantity" data-ng-model="quantity">
+  </div>
+<!-- 
+  <div class="mb-3 mt-3">
+    <label for="transactions_date" class="form-label">Transactions Date</label>
+    <input type="datetime" class="form-control" id="transactions_date" placeholder="Enter date" name="transactions_date" data-ng-model="transactions_date">
+  </div> -->
+
+  <div class="mb-3 mt-3">
+    <label for="books_id" class="form-label">Book id </label>
+    <input type="number" class="form-control" id="books_id" placeholder="Enter book id" name="books_id" data-ng-model="books_id">
+  </div>
+
+  <div class="mb-3 mt-3">
+    <label for="clients_id" class="form-label">Client id</label>
+    <input type="number" class="form-control" id="clients_id" placeholder="Enter client id " name="clients_id" data-ng-model="clients_id">
+  </div>
+  
+  <button class="btn btn-primary" data-ng-click="addTransaction(transactions_id,quantity,books_id,clients_id)">Save</button>
+</form>

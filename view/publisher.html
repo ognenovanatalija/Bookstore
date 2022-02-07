@@ -1,0 +1,37 @@
+<div class="m-3">
+<h3>Authors</h3>
+
+<thead>
+  <tr>
+      <th>
+          <input id="myInput" type="text" placeholder="Search by publisher" data-ng-model="searchbypublishername">
+       </th>
+      <th>
+           <input id="myInput" type="text" placeholder="Search by publisher country" data-ng-model="searchbypublishercountry">
+        </th>
+  </tr>
+</thead>
+  <table class="table table-responsive table-hover table-bordered">
+
+    <thead>
+      <tr>
+        <th>publisher_id</th>
+        <th>publisher_name</th>
+        <th>publisher_country</th>
+      </tr>
+    </thead>
+
+  
+    <tbody>
+      <tr data-ng-repeat="publishers in publisher | filter:{publisher_name:searchbypublishername,publisher_country:searchbypublishercountry}">
+        <td>{{publishers.publisher_id}} {{searchbypublisher}}</td>
+        <td>{{publishers.publisher_name}}</td>
+        <td>{{publishers.publisher_country}}</td>
+
+        <td><button class="btn btn-primary" data-ng-click="deleteRow('publisher',publishers.publisher_id)">DELETE</button></td>
+      </tr>
+    </tbody>
+
+
+  </table>
+</div>
